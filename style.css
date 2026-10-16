@@ -45,6 +45,11 @@ nav a {
     font-size: 14px;
 }
 
+nav a:hover {
+    color: #7957ff;
+    }
+
+
 /* 3. Main hero layout */
 .hero {
     min-height: 75vh;
