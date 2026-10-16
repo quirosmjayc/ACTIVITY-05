@@ -1,0 +1,175 @@
+
+/* 1. Basic page setup */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f5;
+    color: #171717;
+}
+
+/* 2. Navigation bar */
+header {
+    padding: 24px 8%;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #7957ff;
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* 3. Main hero layout */
+.hero {
+    min-height: 75vh;
+    padding: 70px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.eyebrow {
+    color: #7957ff;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -2px;
+    margin: 24px 0;
+}
+
+.hero-content p {
+    color: #666666;
+    font-size: 17px;
+    line-height: 1.7;
+    max-width: 480px;
+}
+
+/* 4. Call-to-action button */
+.hero-button {
+    display: inline-block;
+    margin-top: 18px;
+    padding: 15px 25px;
+    border-radius: 30px;
+    background-color: #171717;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.hero-button:hover {
+    background-color: #7957ff;
+}
+
+/* 5. Decorative visual */
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 350px;
+    background: linear-gradient(135deg, #e7ddff, #c6b4ff);
+    border-radius: 28px;
+    padding: 30px;
+}
+
+.visual-card {
+    width: 100%;
+    max-width: 340px;
+    padding: 40px 30px;
+    background-color: #ffffff;
+    border-radius: 22px;
+    text-align: center;
+    box-shadow: 0 20px 50px #5a3eaa20;
+}
+
+.code-symbol {
+    display: inline-block;
+    color: #7957ff;
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.visual-card h2 {
+    font-size: 23px;
+}
+
+.visual-card p {
+    color: #777777;
+    line-height: 1.6;
+}
+
+/* 6. Other sections */
+#about,
+#projects,
+#contact {
+    padding: 60px 8%;
+}
+
+/* 7. Mobile layout */
+@media (max-width: 700px) {
+    header {
+        padding: 22px 6%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 22px;
+    }
+
+    nav ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+        gap: 35px;
+    }
+
+    h1 {
+        font-size: 44px;
+    }
+
+    .hero-visual {
+        min-height: 280px;
+    }
+}
