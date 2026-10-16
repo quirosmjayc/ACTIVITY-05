@@ -140,14 +140,8 @@ h1 {
     line-height: 1.6;
 }
 
-/* 6. Other sections */
-#about,
-#projects,
-#contact {
-    padding: 60px 8%;
-}
 
-/* 7. Mobile layout */
+/* 6. Mobile layout */
 @media (max-width: 700px) {
     header {
         padding: 22px 6%;
@@ -177,4 +171,133 @@ h1 {
     .hero-visual {
         min-height: 280px;
     }
+
+    /* Mobile adjustments for other sections */
+    .info-section {
+        padding: 55px 6%;
+    }
+
+    .project-card {
+        padding: 25px;
+    }
+
+    .contact-card {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+
+/* Shared styling for About, Projects, and Contact */
+.info-section {
+    padding: 80px 8%;
+    scroll-margin-top: 24px;
+}
+
+.info-section h2 {
+    font-size: clamp(30px, 4vw, 46px);
+    letter-spacing: -1px;
+    margin: 18px 0;
+}
+
+.info-section > p {
+    max-width: 650px;
+    color: #666666;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.info-section > a {
+    max-width: 650px;
+    color: #666666;
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+
+/* Project card */
+.project-card {
+    max-width: 520px;
+    margin-top: 30px;
+    padding: 32px;
+    background-color: #ffffff;
+    border: 1px solid #e9e5f5;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px #1717170a;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px #17171714;
+}
+
+.project-card h3 {
+    font-size: 23px;
+}
+
+.project-card p {
+    color: #666666;
+    line-height: 1.7;
+}
+
+.project-card a,
+.contact-card a {
+    color: #7957ff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.project-card a:hover,
+.contact-card a:hover {
+    text-decoration: underline;
+}
+
+/* Contact card */
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    max-width: 520px;
+    margin-top: 28px;
+    padding: 24px;
+    background-color: #ffffff;
+    border: 1px solid #e9e5f5;
+    border-radius: 18px;
+}
+
+.contact-card span {
+    color: #666666;
+}
+
+body {
+    background-color: #f7f5f0;
+    position: relative;
+    isolation: isolate;
+}
+
+.background-shape {
+    position: fixed;
+    width: 600px;
+    height: 600px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.shape-one {
+    background-image: url("orange1.png");
+    top: -190px;
+    right: -190px;
+    transform: rotate(90deg);
+}
+
+.shape-two {
+    background-image: url("orange2.png");
+    bottom: -190px;
+    left: -190px;
+    transform: rotate(270deg);
 }
